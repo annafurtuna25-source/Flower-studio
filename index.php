@@ -1,7 +1,14 @@
 <?php
+ob_start();
+?>
 
-$titlu = 'Florărie ';
+<main>
+    <h2>Flower Studio</h2>
+    <p>Fiecare buchet spune o poveste.</p>
+</main>
 
-$pagina = __DIR__ . '/src/app/home.php';
+<?php
+$content = ob_get_clean();
 
 require __DIR__ . '/src/app/layout.php';
+?>

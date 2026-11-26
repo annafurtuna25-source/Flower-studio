@@ -3,68 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title><?= htmlspecialchars($titlu, ENT_QUOTES, 'UTF-8') ?></title>
+    <title>Flower Studio - Florărie online</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #fff8fa;
-            color: #333;
+            background-color: #F8F3ED;
+            color: #435640;
+            font-family: Georgia, serif;
         }
 
         .header {
-            padding: 24px;
-            background: #7d3154;
+            background-color: #435640;
             color: white;
-            text-align: center;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .header h1 {
-            margin: 0 0 10px;
+            margin: 0;
+            font-size: 28px;
+            font-weight: normal;
         }
 
-        .header p {
-            margin: 0;
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
         }
 
         main {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 24px;
-        }
-
-        h2 {
-            color: #7d3154;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        footer {
-            padding: 20px;
             text-align: center;
-            border-top: 1px solid #e4cad5;
+            padding: 100px 20px;
+        }
+
+        main h2 {
+            font-size: 50px;
+            font-weight: normal;
+        }
+
+        main p {
+            font-size: 20px;
+            font-style: italic;
         }
     </style>
 </head>
+
 <body>
 
-    <?php require __DIR__ . '/../components/Header.php'; ?>
+    <?php require __DIR__ . '/../components/header.php'; ?>
 
-    <main>
-        <?php require $pagina; ?>
-    </main>
-
-    <footer>
-        <p>&copy; <?= date('Y') ?> Florărie </p>
-    </footer>
+    <?php echo $content; ?>
 
 </body>
 </html>
