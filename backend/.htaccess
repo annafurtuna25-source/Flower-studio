@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteRule (^|/)\. - [F,L]
+RewriteRule ^(src|database)(/|$) - [F,L,NC]
+RewriteRule ^README\.md$ - [F,L,NC]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L,QSA]
